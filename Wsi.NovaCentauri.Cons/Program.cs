@@ -1,10 +1,14 @@
-﻿namespace Wsi.NovaCentauri.Cons
+﻿using Involved.HTF.Common;
+
+namespace Wsi.NovaCentauri.Cons
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
+            HackTheFutureClient client = new HackTheFutureClient();
+            await client.Login(Constants.Name, Constants.Token);
         }
     }
 }
